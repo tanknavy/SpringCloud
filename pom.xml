@@ -13,6 +13,7 @@
 
   <modules>
     <module>provider-payment8001</module>
+      <module>seata-order-service2001</module>
   </modules>
 
 

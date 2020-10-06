@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="provider-payment8001" />
+        <module name="seata-order-service2001" />
       </profile>
     </annotationProcessing>
   </component>
