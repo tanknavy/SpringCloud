@@ -16,8 +16,8 @@ import java.math.BigDecimal;
 public class Account {
     private Long id;
     private Long userId;
-    private BigDecimal total;
-    private BigDecimal used;
-    private BigDecimal residue;
+    private BigDecimal total;//总额度
+    private BigDecimal used;//使用多了
+    private BigDecimal residue;//剩余多少
 
 }

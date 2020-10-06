@@ -11,6 +11,7 @@ import javax.annotation.Resource;
 
 /**
  * Author: Alex Cheng 10/5/2020 9:59 PM
+ * 测试：get方法 http://localhost:2001/order/create?userId=1&productId=1&count=10&money=100
  */
 
 @RestController
@@ -26,4 +27,5 @@ public class OrderController {
         orderService.create(order);
         return new CommonResult(200, "订单创建成功...");
     }
+
 }

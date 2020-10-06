@@ -1,9 +1,9 @@
 package com.tanknavy.springcloud.ali.service;
 
-import com.tanknavy.springcloud.ali.domain.CommonResult;
-import com.tanknavy.springcloud.ali.domain.Storage;
-
+//为什么要写接口，因为这个微服务要被别人调用，使用接口引用
 public interface StorageService {
 
-    CommonResult decrease(Storage storage);
+    //扣减库存
+    //CommonResult decrease(Storage storage);
+    void decrease(Long productId, Integer count);
 }

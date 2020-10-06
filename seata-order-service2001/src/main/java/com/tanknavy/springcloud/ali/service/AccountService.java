@@ -13,5 +13,5 @@ public interface AccountService {
 
     //写操作，发的post
     @PostMapping("/account/decrease") //调用微服务下面url，对userId做money扣减
-    CommonResult decrease(@RequestParam("userId") Long userId, @RequestParam("money") BigDecimal money);
+    CommonResult decrease(@RequestParam("userId") Long userId, @RequestParam("money") BigDecimal money); //不写RequestParam默认按名称对应
 }

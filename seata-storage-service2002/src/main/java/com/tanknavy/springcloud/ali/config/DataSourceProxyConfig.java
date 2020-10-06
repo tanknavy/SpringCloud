@@ -15,7 +15,7 @@ import javax.sql.DataSource;
 
 /**
  * Author: Alex Cheng 10/5/2020 10:13 PM
- * 使用Seata对数据源进行代理
+ * 使用Seata对DataSourceProxy数据源进行代理，原先是DruidDataSource
  */
 @Configuration
 public class DataSourceProxyConfig { //Seata代替Druid做DataSourceProxy

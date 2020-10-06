@@ -37,7 +37,7 @@ public class OrderServiceImpl implements OrderService {
         //2.微服务-库存扣减
         log.info("------>订单微服务开始调用库存，做扣减count"); //post
         storageService.decrease(order.getProductId(), order.getCount());
-        log.info("------>订单微服务开始调用库存，做扣减end");
+        log.info("------>订单微服务开始调用库存，做storage扣减end");
 
         //3.微服务-账户扣减
         log.info("------>账户维服务开始调用账户，做money扣款");

@@ -1,8 +1,10 @@
 package com.tanknavy.springcloud.ali.service;
 
-import com.tanknavy.springcloud.ali.domain.Account;
-import com.tanknavy.springcloud.ali.domain.CommonResult;
+import org.springframework.web.bind.annotation.RequestParam;
 
-public interface AccountService {
-    CommonResult decrease(Account account);
+import java.math.BigDecimal;
+
+public interface AccountService { //别人服务通过feign来post请求调用我的服务
+    //构建账户余额
+    void decrease(@RequestParam("userId") Long userId, @RequestParam("money") BigDecimal money);
 }
