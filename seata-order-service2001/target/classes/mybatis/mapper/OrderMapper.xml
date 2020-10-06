@@ -21,7 +21,7 @@
     <!--id是DB自增， status刚开始为0-->
     <insert id="create">
         INSERT INTO t_order (id,user_id,product_id,count,money,status)
-        VALUES (null,#{user_id},#{product_id},#{count},#{money},0)
+        VALUES (null,#{userId},#{productId},#{count},#{money},0)
     </insert>
 
     <!--select id="update" resultType="com.tanknavy.batis.bean.Employee"-->
