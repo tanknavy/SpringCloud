@@ -59,4 +59,4 @@ management:
   security:
     enabled: false
   context-path: manage
-  port: 8102
+  port: 8101

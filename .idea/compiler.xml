@@ -9,7 +9,12 @@
         <outputRelativeToContentRoot value="true" />
         <module name="provider-payment8001" />
         <module name="seata-order-service2001" />
+        <module name="seata-account-service2003" />
+        <module name="seata-storage-service2002" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="seataaccountservice2003" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

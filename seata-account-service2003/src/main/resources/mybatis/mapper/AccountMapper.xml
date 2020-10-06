@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tanknavy.springcloud.ali.dao.AccountDao">
+   <!--    public Employee getEmpById(Integer id);
+   注意namespace，要让mybatis知道这个xml文件的存在，在配置文件中
+    public void insertEmp(Employee employee);-->
+
+    <!--mybatis映射bean属性(userId)和table字段(use_id)，可以直接驼峰式命名-->
+    <!--以下具体指定id/column 属性栏位的映射， DB中数据类型-->
+    <resultMap id="BaseResultMap" type="com.tanknavy.springcloud.ali.domain.Account">
+        <id column="id" property="id" jdbcType="BIGINT"/>
+        <result column="user_id" property="userId" jdbcType="BIGINT"/>
+        <result column="total" property="total" jdbcType="DECIMAL" />
+        <result column="used" property="used" jdbcType="DECIMAL" />
+        <result column="residue" property="residue" jdbcType="INTEGER" />
+    </resultMap>
+    
+    <!--id是DB自增， status刚开始为0-->
+<!--    <insert id="create">-->
+<!--        INSERT INTO t_order (id,user_id,total,used,residue)-->
+<!--        VALUES (null,#{productId},#{total},#{used},#{residue})-->
+<!--    </insert>-->
+
+    <!--select id="update" resultType="com.tanknavy.batis.bean.Employee"-->
+    <!--mybatis映射bean属性(userId)和table字段(user_id)，可以直接驼峰式对应-->
+    <update id="decrease">
+        UPDATE t_account SET used=#{used}, residue=#{residue} WHERE user_id=#{userId}
+    </update>
+    
+</mapper>
